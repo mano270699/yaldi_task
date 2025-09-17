@@ -338,10 +338,15 @@ class RegisterScreen extends StatelessWidget {
                                                 viewModel
                                                     .changeConfirmPasswordVisibility();
                                               },
-                                              child: Icon(
+                                              child: SvgPicture.asset(
                                                 state.data
-                                                    ? Icons.remove_red_eye
-                                                    : Icons.remove_red_eye,
+                                                    ? AppIconSvg.passEyeIcon
+                                                    : AppIconSvg.openEyeIcon,
+
+                                                colorFilter: ColorFilter.mode(
+                                                  AppColors.secondLightGray,
+                                                  BlendMode.srcIn,
+                                                ),
                                               ),
                                             ),
                                           ),
